@@ -298,8 +298,8 @@ export class LiveViewRenderer {
                         const spriteWidth = ts * 0.7;
                         const spriteHeight = ts * 0.55;
                         const drawX = Math.round(baseX - spriteWidth / 2);
-                        // Move logs/bushes further up so they sit centered in the isometric diamond
-                        const drawY = Math.round(baseY - spriteHeight);
+                        // Adjust logs/bushes so they sit centered in the isometric diamond
+                        const drawY = Math.round(baseY - spriteHeight * 0.5);
                         ctx.drawImage(image, drawX, drawY, spriteWidth, spriteHeight);
                     } else {
                         const spriteWidth = ts;

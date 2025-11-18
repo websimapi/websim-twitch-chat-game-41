@@ -208,8 +208,8 @@ function renderYSorted(ctx, players, map, drawStartX, drawEndX, drawStartY, draw
                         const spriteWidth = tileSize * 0.7;
                         const spriteHeight = tileSize * 0.55;
                         const drawX = Math.round(baseX - spriteWidth / 2);
-                        // Move logs/bushes further up so they sit centered in the isometric diamond
-                        const drawY = Math.round(baseY - spriteHeight);
+                        // Adjust logs/bushes so they sit centered in the isometric diamond
+                        const drawY = Math.round(baseY - spriteHeight * 0.5);
                         ctx.drawImage(image, drawX, drawY, spriteWidth, spriteHeight);
                     } else {
                         // Trees: full height but still anchored to tile center
